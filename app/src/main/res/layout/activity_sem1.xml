@@ -100,8 +100,9 @@
         android:layout_marginEnd="33dp"
         android:autofillHints="n"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
+        android:imeOptions="actionNext"
+        android:imeActionLabel="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/C_grade" />
     <EditText
@@ -110,8 +111,9 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
+        android:imeOptions="actionNext"
+        android:imeActionLabel="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/che_grade" />
     <EditText
@@ -120,8 +122,9 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
+        android:imeOptions="actionNext"
+        android:imeActionLabel="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phy_grade" />
     <EditText
@@ -130,8 +133,9 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
+        android:imeOptions="actionNext"
+        android:imeActionLabel="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mat_grade" />
     <EditText
@@ -140,8 +144,9 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
+        android:imeOptions="actionNext"
+        android:imeActionLabel="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eng_grade" />
     <EditText
@@ -150,7 +155,8 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:imeActionLabel="Next"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Clab_grade" />
@@ -160,8 +166,9 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
+        android:imeOptions="actionDone"
+        android:imeActionLabel="Done"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chemlab_grade" />
     <EditText
@@ -170,8 +177,9 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
+        android:imeOptions="actionNext"
+        android:imeActionLabel="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BES_GRADE" />
     <EditText
@@ -181,9 +189,10 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:maxLength="2"
         android:text=""
+        android:imeOptions="actionNext"
+        android:imeActionLabel="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sem1" />
 

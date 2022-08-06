@@ -74,7 +74,9 @@
     <string name="select">Select</string>
     <string name="grade">Grade</string>
 
-    <string name="note">Note:\n1.Enter the grade value in number eg:10\n\n2.click confirm to check the GPA value for the SEM</string>
+    <string name="note">Note:\n1.Enter the grade value in number eg:10\n\n
+        2.click confirm to check the GPA value for the SEM\n\n
+        3.Click Enable Button for enabling the GPA Keyboard to use the app and make the keyboard default in ur android phone</string>
 
 
 </resources>
