@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SEM_2">
+
+    <TextView
+        android:id="@+id/Sem2"
+        android:layout_width="238dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="84dp"
+        android:text="@string/sem2"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DLD"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/dld"
+        app:layout_constraintEnd_toStartOf="@+id/DLD_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/Sem2" />
+
+    <TextView
+        android:id="@+id/EVS"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/evs"
+        app:layout_constraintEnd_toStartOf="@+id/EVS_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/DLD" />
+
+
+    <TextView
+        android:id="@+id/FDS"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/fds"
+        app:layout_constraintEnd_toStartOf="@+id/FDS_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/EVS" />
+
+    <TextView
+        android:id="@+id/PYTHON"
+        android:layout_width="251dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/python"
+        app:layout_constraintEnd_toStartOf="@+id/PYTHON_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/FDS" />
+
+    <TextView
+        android:id="@+id/EG"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/eg"
+        app:layout_constraintEnd_toStartOf="@+id/EG_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/PYTHON" />
+
+    <TextView
+        android:id="@+id/ep_lab"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/ep_lab"
+        app:layout_constraintEnd_toStartOf="@+id/EG_LAB_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/Phy_LAB" />
+
+    <TextView
+        android:id="@+id/Phy_LAB"
+        android:layout_width="251dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/python_lab"
+        app:layout_constraintEnd_toStartOf="@+id/PY_LAB_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/CDE" />
+
+    <TextView
+        android:id="@+id/CDE"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/cde"
+        app:layout_constraintEnd_toStartOf="@+id/CD_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/EG" />
+
+    <EditText
+        android:id="@+id/DLD_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sem2" />
+
+    <EditText
+        android:id="@+id/EG_LAB_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PY_LAB_GRADE" />
+
+    <EditText
+        android:id="@+id/PY_LAB_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CD_GRADE" />
+
+    <EditText
+        android:id="@+id/CD_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EG_GRADE" />
+
+    <EditText
+        android:id="@+id/EG_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PYTHON_GRADE" />
+
+    <EditText
+        android:id="@+id/PYTHON_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FDS_GRADE" />
+
+    <EditText
+        android:id="@+id/FDS_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EVS_GRADE" />
+
+    <EditText
+        android:id="@+id/EVS_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DLD_GRADE" />
+
+    <Button
+        android:id="@+id/sem2_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/confirm"
+        app:layout_constraintEnd_toStartOf="@+id/sem2_homeBTN"
+        app:layout_constraintTop_toBottomOf="@+id/Sem2" />
+
+    <Button
+        android:id="@+id/sem2_homeBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EG_LAB_GRADE" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

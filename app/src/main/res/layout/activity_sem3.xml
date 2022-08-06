@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SEM_3">
+
+    <EditText
+        android:id="@+id/CA_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sem3" />
+
+    <EditText
+        android:id="@+id/PS_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:autofillHints="n"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CA_GRADE" />
+
+    <EditText
+        android:id="@+id/DS_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PS_GRADE" />
+
+    <EditText
+        android:id="@+id/OOPS_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DS_GRADE" />
+
+    <EditText
+        android:id="@+id/SE_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OOPS_GRADE" />
+
+    <EditText
+        android:id="@+id/AI_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SE_GRADE" />
+
+    <EditText
+        android:id="@+id/DS_LAB_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AI_GRADE" />
+
+    <EditText
+        android:id="@+id/OOPS_LAB_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DS_LAB_GRADE" />
+
+    <EditText
+        android:id="@+id/CA_LAB_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OOPS_LAB_GRADE" />
+
+
+
+    <TextView
+        android:id="@+id/DS"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/ds"
+        app:layout_constraintEnd_toStartOf="@+id/DS_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/PS" />
+
+    <TextView
+        android:id="@+id/OOPS"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/oops"
+        app:layout_constraintEnd_toStartOf="@+id/OOPS_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/DS" />
+
+    <TextView
+        android:id="@+id/SE"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/se"
+        app:layout_constraintEnd_toStartOf="@+id/SE_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/OOPS" />
+
+    <TextView
+        android:id="@+id/AI"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/ai"
+        app:layout_constraintEnd_toStartOf="@+id/AI_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/SE" />
+
+    <TextView
+        android:id="@+id/DS_LAB"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/ds_lab"
+        app:layout_constraintEnd_toStartOf="@+id/DS_LAB_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/AI" />
+
+    <TextView
+        android:id="@+id/CA"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/ca"
+        app:layout_constraintEnd_toStartOf="@+id/CA_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/sem3" />
+
+    <TextView
+        android:id="@+id/CA_LAB"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/ca_lab"
+        app:layout_constraintEnd_toStartOf="@+id/CA_LAB_grade"
+        app:layout_constraintTop_toBottomOf="@+id/OOPS_LAB" />
+
+    <TextView
+        android:id="@+id/OOPS_LAB"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/oops_lab"
+        app:layout_constraintEnd_toStartOf="@+id/OOPS_LAB_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/DS_LAB" />
+
+    <TextView
+        android:id="@+id/PS"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/ps"
+        app:layout_constraintEnd_toStartOf="@+id/PS_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/CA" />
+
+    <Button
+        android:id="@+id/sem3_confirm_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="528dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/confirm"
+        app:layout_constraintEnd_toStartOf="@+id/sem3_homeBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sem3" />
+
+    <TextView
+        android:id="@+id/sem3"
+        android:layout_width="238dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="84dp"
+        android:text="@string/sem3"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sem3_homeBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CA_LAB_grade" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

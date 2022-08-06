@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">GPA Calci</string>
+
+    <string-array name="SEM">
+        <item>choose</item>
+        <item>sem1</item>
+        <item>sem2</item>
+        <item>sem3</item>
+        <item>sem4</item>
+    </string-array>
+
+    <string-array name="grade">
+        <item>choose</item>
+        <item>O</item>
+        <item>A</item>
+        <item>A+</item>
+        <item>B</item>
+        <item>B+</item>
+        <item>RA</item>
+    </string-array>
+
+    // SEM1 subjects
+    <string name="C">\nProgramming in C</string>
+    <string name="chem">\nChemistry</string>
+    <string name="phy">\nPhysics</string>
+    <string name="mat">\nMaths</string>
+    <string name="eng">\nEnglish</string>
+    <string name="bes">\nBasic Engineering Science</string>
+    <string name="C_lab">\nProgramming in C LAB</string>
+    <string name="chem_lab">\nChemistry LAB</string>
+    <string name="phy_lab">\nPhysics_LAB</string>
+
+    //SEM 2 subjects
+    <string name="dld">\nDigital Logic and Design</string>
+    <string name="evs">\nEnvironment Science</string>
+    <string name="fds">\nFoundation of Data Science</string>
+    <string name="python">\nProblem Solving and Python Programming</string>
+    <string name="eg">\nEngineering Graphics</string>
+    <string name="cde">\nCalculus and Differential Equation</string>
+    <string name="python_lab">\nProblem Solving and Python Programming LAB</string>
+    <string name="ep_lab">\nEngineering Practice LAB</string>
+
+    //SEM 3 subjects
+    <string name="ca">\nComputer Architecture</string>
+    <string name="ps">\nProbability and Statistics</string>
+    <string name="ds">\nData Structures</string>
+    <string name="oops">\nObject Oriented Programming</string>
+    <string name="se">\nSoftware Engineering</string>
+    <string name="ai">\nIntroduction to AI</string>
+    <string name="ds_lab">\nData Structures LAB</string>
+    <string name="oops_lab">\nObject Oriented Programming LAB</string>
+    <string name="ca_lab">\nComputer Architecture LAB</string>
+
+    //SEM 4 subjects
+    <string name="dm">\nDiscrete Mathematics</string>
+    <string name="cn">\nComputer Networks</string>
+    <string name="dbms">\nDataBase Management System</string>
+    <string name="os">\nOperating System</string>
+    <string name="es">\nEmbedded System</string>
+    <string name="sdm">\nSoftware Design and Modelling</string>
+    <string name="dbms_lab">\nDataBase Management System LAB</string>
+    <string name="os_lab">\nOperating System LAB</string>
+    <string name="cn_lab">\nComputer Networks LAB</string>
+
+    //Widgets Declaration
+    <string name="confirm">Confirm</string>
+    <string name="next">Next</string>
+    <string name="home">HOME</string>
+    <string name="prev">Prev</string>
+    <string name="sem1">SEM 1</string>
+    <string name="sem2">SEM 2</string>
+    <string name="sem3">SEM 3</string>
+    <string name="sem4">SEM 4</string>
+    <string name="select">Select</string>
+    <string name="grade">Grade</string>
+
+    <string name="note">Note:\n1.Enter the grade value in number eg:10\n\n2.click confirm to check the GPA value for the SEM</string>
+
+
+</resources>

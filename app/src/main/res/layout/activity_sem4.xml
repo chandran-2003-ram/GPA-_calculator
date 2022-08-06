@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SEM_4">
+
+    <EditText
+        android:id="@+id/DBMS_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CN_grade" />
+
+    <EditText
+        android:id="@+id/OS_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DBMS_GRADE" />
+
+    <EditText
+        android:id="@+id/ES_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OS_GRADE" />
+
+    <EditText
+        android:id="@+id/SDM_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ES_GRADE" />
+
+
+    <EditText
+        android:id="@+id/DBMS_LAB_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SDM_GRADE" />
+
+    <EditText
+        android:id="@+id/OS_LAB_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DBMS_LAB_GRADE" />
+
+    <EditText
+        android:id="@+id/CN_LAB_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OS_LAB_GRADE" />
+
+    <EditText
+        android:id="@+id/CN_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DM_GRADE" />
+
+    <EditText
+        android:id="@+id/DM_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sem4" />
+
+    <TextView
+        android:id="@+id/DBMS"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/dbms"
+        app:layout_constraintEnd_toStartOf="@+id/DBMS_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/CN" />
+
+    <TextView
+        android:id="@+id/OS"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/os"
+        app:layout_constraintEnd_toStartOf="@+id/OS_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/DBMS" />
+
+    <TextView
+        android:id="@+id/ES"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/es"
+        app:layout_constraintEnd_toStartOf="@+id/ES_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/OS" />
+
+    <TextView
+        android:id="@+id/SDM"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/sdm"
+        app:layout_constraintEnd_toStartOf="@+id/SDM_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/ES" />
+
+    <TextView
+        android:id="@+id/DBMS_LAB"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/dbms_lab"
+        app:layout_constraintEnd_toStartOf="@+id/DBMS_LAB_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/SDM" />
+
+    <TextView
+        android:id="@+id/DM"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/dm"
+        app:layout_constraintEnd_toStartOf="@+id/DM_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/sem4" />
+
+    <TextView
+        android:id="@+id/CN_LAB"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/cn_lab"
+        app:layout_constraintEnd_toStartOf="@+id/CN_LAB_GRADE"
+        app:layout_constraintTop_toBottomOf="@id/OS_LAB" />
+
+    <TextView
+        android:id="@+id/OS_LAB"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/os_lab"
+        app:layout_constraintEnd_toStartOf="@+id/OS_LAB_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/DBMS_LAB" />
+
+    <TextView
+        android:id="@+id/CN"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/cn"
+        app:layout_constraintEnd_toStartOf="@+id/CN_grade"
+        app:layout_constraintTop_toBottomOf="@+id/DM" />
+
+    <Button
+        android:id="@+id/sem4_confirm_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="540dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/confirm"
+        app:layout_constraintEnd_toStartOf="@+id/SEM4_homeBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sem4" />
+
+    <TextView
+        android:id="@+id/sem4"
+        android:layout_width="238dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="84dp"
+        android:text="@string/sem4"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/SEM4_homeBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CN_LAB_GRADE" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

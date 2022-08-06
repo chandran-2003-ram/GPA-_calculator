@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SEM_1">
+
+    <TextView
+        android:id="@+id/PHY"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/phy"
+        app:layout_constraintEnd_toStartOf="@+id/phy_grade"
+        app:layout_constraintTop_toBottomOf="@+id/CHEM" />
+    <TextView
+        android:id="@+id/MAT"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/mat"
+        app:layout_constraintEnd_toStartOf="@+id/mat_grade"
+        app:layout_constraintTop_toBottomOf="@+id/PHY" />
+    <TextView
+        android:id="@+id/ENG"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/eng"
+        app:layout_constraintEnd_toStartOf="@+id/eng_grade"
+        app:layout_constraintTop_toBottomOf="@+id/MAT" />
+    <TextView
+        android:id="@+id/C_LAB"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/C_lab"
+        app:layout_constraintEnd_toStartOf="@+id/Clab_grade"
+        app:layout_constraintTop_toBottomOf="@+id/ENG" />
+    <TextView
+        android:id="@+id/CHEM_LAB"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/chem_lab"
+        app:layout_constraintEnd_toStartOf="@+id/chemlab_grade"
+        app:layout_constraintTop_toBottomOf="@+id/C_LAB" />
+    <TextView
+        android:id="@+id/C"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/C"
+        app:layout_constraintEnd_toStartOf="@+id/C_grade"
+        app:layout_constraintTop_toBottomOf="@+id/BES" />
+    <TextView
+        android:id="@+id/BES"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/bes"
+        app:layout_constraintEnd_toStartOf="@+id/BES_GRADE"
+        app:layout_constraintTop_toBottomOf="@+id/sem1" />
+    <TextView
+        android:id="@+id/PHY_LAB"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/phy_lab"
+        app:layout_constraintEnd_toStartOf="@+id/phylab_grade"
+        app:layout_constraintTop_toBottomOf="@+id/CHEM_LAB" />
+    <TextView
+        android:id="@+id/CHEM"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/chem"
+        app:layout_constraintEnd_toStartOf="@+id/che_grade"
+        app:layout_constraintTop_toBottomOf="@+id/C" />
+    <TextView
+        android:id="@+id/sem1"
+        android:layout_width="238dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="84dp"
+        android:text="@string/sem1"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/che_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:autofillHints="n"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/C_grade" />
+    <EditText
+        android:id="@+id/phy_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/che_grade" />
+    <EditText
+        android:id="@+id/mat_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phy_grade" />
+    <EditText
+        android:id="@+id/eng_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mat_grade" />
+    <EditText
+        android:id="@+id/Clab_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eng_grade" />
+    <EditText
+        android:id="@+id/chemlab_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Clab_grade" />
+    <EditText
+        android:id="@+id/phylab_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chemlab_grade" />
+    <EditText
+        android:id="@+id/C_grade"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BES_GRADE" />
+    <EditText
+        android:id="@+id/BES_GRADE"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/grade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sem1" />
+
+
+    <Button
+        android:id="@+id/sem1_homeBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phylab_grade" />
+
+    <Button
+        android:id="@+id/sem1_confirm_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="540dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/confirm"
+        app:layout_constraintEnd_toStartOf="@+id/sem1_homeBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sem1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
