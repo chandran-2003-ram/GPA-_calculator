@@ -31,9 +31,9 @@ public class SEM_1 extends AppCompatActivity {
         EDT_MAT = findViewById(R.id.mat_grade);
         EDT_ENG = findViewById(R.id.eng_grade);
 
-        EDT_CLAB = findViewById(R.id.Clab_grade);
-        EDT_CHEMLAB = findViewById(R.id.chemlab_grade);
-        EDT_PHYLAB = findViewById(R.id.phylab_grade);
+        EDT_CLAB = findViewById(R.id.C_lab_grade);
+        EDT_CHEMLAB = findViewById(R.id.chem_lab_grade);
+        EDT_PHYLAB = findViewById(R.id.phy_lab_grade);
 
         confirm = findViewById(R.id.sem1_confirm_BTN);
         home = findViewById(R.id.sem1_homeBTN);

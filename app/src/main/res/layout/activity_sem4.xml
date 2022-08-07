@@ -12,7 +12,6 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CN_grade" />
@@ -23,7 +22,6 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DBMS_GRADE" />
@@ -34,7 +32,6 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OS_GRADE" />
@@ -45,7 +42,6 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ES_GRADE" />
@@ -57,7 +53,6 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SDM_GRADE" />
@@ -68,7 +63,6 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DBMS_LAB_GRADE" />
@@ -79,7 +73,6 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OS_LAB_GRADE" />
@@ -90,7 +83,6 @@
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DM_GRADE" />
@@ -102,7 +94,6 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:inputType="number"
         android:maxLength="2"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"

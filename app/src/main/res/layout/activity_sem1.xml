@@ -36,7 +36,7 @@
         android:layout_height="48dp"
         android:layout_marginEnd="40dp"
         android:text="@string/C_lab"
-        app:layout_constraintEnd_toStartOf="@+id/Clab_grade"
+        app:layout_constraintEnd_toStartOf="@+id/C_lab_grade"
         app:layout_constraintTop_toBottomOf="@+id/ENG" />
     <TextView
         android:id="@+id/CHEM_LAB"
@@ -44,7 +44,7 @@
         android:layout_height="48dp"
         android:layout_marginEnd="40dp"
         android:text="@string/chem_lab"
-        app:layout_constraintEnd_toStartOf="@+id/chemlab_grade"
+        app:layout_constraintEnd_toStartOf="@+id/chem_lab_grade"
         app:layout_constraintTop_toBottomOf="@+id/C_LAB" />
     <TextView
         android:id="@+id/C"
@@ -69,7 +69,7 @@
         android:layout_height="48dp"
         android:layout_marginEnd="40dp"
         android:text="@string/phy_lab"
-        app:layout_constraintEnd_toStartOf="@+id/phylab_grade"
+        app:layout_constraintEnd_toStartOf="@+id/phy_lab_grade"
         app:layout_constraintTop_toBottomOf="@+id/CHEM_LAB" />
     <TextView
         android:id="@+id/CHEM"
@@ -139,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mat_grade" />
     <EditText
-        android:id="@+id/Clab_grade"
+        android:id="@+id/C_lab_grade"
         android:layout_width="71dp"
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
@@ -150,7 +150,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eng_grade" />
     <EditText
-        android:id="@+id/chemlab_grade"
+        android:id="@+id/chem_lab_grade"
         android:layout_width="71dp"
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
@@ -159,9 +159,9 @@
         android:imeActionLabel="Next"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Clab_grade" />
+        app:layout_constraintTop_toBottomOf="@+id/C_lab_grade" />
     <EditText
-        android:id="@+id/phylab_grade"
+        android:id="@+id/phy_lab_grade"
         android:layout_width="71dp"
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
@@ -170,7 +170,7 @@
         android:imeOptions="actionDone"
         android:imeActionLabel="Done"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chemlab_grade" />
+        app:layout_constraintTop_toBottomOf="@+id/chem_lab_grade" />
     <EditText
         android:id="@+id/C_grade"
         android:layout_width="71dp"
@@ -205,7 +205,7 @@
         android:layout_marginEnd="24dp"
         android:text="@string/home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phylab_grade" />
+        app:layout_constraintTop_toBottomOf="@+id/phy_lab_grade" />
 
     <Button
         android:id="@+id/sem1_confirm_BTN"
