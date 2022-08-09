@@ -1,5 +1,6 @@
 package com.example.gpacalci;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -14,15 +15,26 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class SEM_2 extends AppCompatActivity {
     EditText EDT_EVS, EDT_DLD, EDT_FDS, EDT_PYTHON, EDT_CD, EDT_EG_LAB, EDT_PY_LAB, EDT_EG;
-    Button confirm,home;
+    Button confirm;
     Dialog dialog;
+
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://gpa-calculator-80e03-default-rtdb.firebaseio.com/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState);
         setContentView(R.layout.activity_sem2);
+
+        getSupportActionBar().setTitle("SEM 2");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         EDT_EVS = findViewById(R.id.EVS_GRADE);
         EDT_DLD = findViewById(R.id.DLD_GRADE);
@@ -35,8 +47,6 @@ public class SEM_2 extends AppCompatActivity {
         EDT_PY_LAB = findViewById(R.id.PY_LAB_GRADE);
 
         confirm = findViewById(R.id.sem2_confirm_button);
-        home = findViewById(R.id.sem2_homeBTN);
-
         confirm.setEnabled(false);
 
         dialog = new Dialog(this);
@@ -49,13 +59,6 @@ public class SEM_2 extends AppCompatActivity {
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation; //Setting the animations to dialog
 
         Button okay = dialog.findViewById(R.id.btn_okay);
-
-        okay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
 
         EDT_DLD.addTextChangedListener(textWatcher);
         EDT_EVS.addTextChangedListener(textWatcher);
@@ -73,13 +76,10 @@ public class SEM_2 extends AppCompatActivity {
                 dialog.show();
             }
         });
-
-
-        home.setOnClickListener(new View.OnClickListener() {
+        okay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent home = new Intent(SEM_2.this, MainActivity.class);
-                startActivity(home);
+                dialog.dismiss();
             }
         });
     }
@@ -224,6 +224,31 @@ public class SEM_2 extends AppCompatActivity {
 
                 TextView display =  dialog.findViewById(R.id.display);
                 display.setText(Double.toString(result));
+
+                Intent intent = getIntent();
+                String name = intent.getStringExtra("name");
+
+                databaseReference.child(name).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        databaseReference.child(name).child("sem2").child("dld").setValue(Assign1);
+                        databaseReference.child(name).child("sem2").child("evs").setValue(Assign2);
+                        databaseReference.child(name).child("sem2").child("fds").setValue(Assign3);
+                        databaseReference.child(name).child("sem2").child("python").setValue(Assign4);
+                        databaseReference.child(name).child("sem2").child("eg").setValue(Assign5);
+                        databaseReference.child(name).child("sem2").child("cde").setValue(Assign6);
+
+                        databaseReference.child(name).child("sem2").child("python_lab").setValue(Assign7);
+                        databaseReference.child(name).child("sem2").child("eg_lab").setValue(Assign8);
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
             }
             else
             {

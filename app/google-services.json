@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "577868994774",
+    "project_id": "gpa-calculator-80e03",
+    "storage_bucket": "gpa-calculator-80e03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577868994774:android:b393737ebbe82eab809177",
+        "android_client_info": {
+          "package_name": "com.example.gpacalci"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577868994774-tos1avb5epc8hg5aqblolfd5fjs6o9t1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gpacalci",
+            "certificate_hash": "ac1e8a04ef4e9deed5b3eb39016afc7506c4a1f4"
+          }
+        },
+        {
+          "client_id": "577868994774-au00so2no8k7nl5hrf3kros3ulgs189l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO8j5VjCji7193ehShvZJxGzXkrpxg7vE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577868994774-au00so2no8k7nl5hrf3kros3ulgs189l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

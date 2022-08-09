@@ -10,21 +10,29 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.gpacalci.databinding.ActivityMainBinding;
 
 
 public class MainActivity extends AppCompatActivity {
 
     Spinner spinner;
-    Button button;
+    Button button, ok;
+    EditText name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         button = findViewById(R.id.button);
         spinner = findViewById(R.id.mainspin);
+        ok = findViewById(R.id.ok);
+        name = findViewById(R.id.name);
 
         ArrayAdapter<CharSequence> dataAdapter = ArrayAdapter.createFromResource(this,R.array.SEM, android.R.layout.simple_spinner_item);
 
@@ -48,36 +56,63 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (parent.getItemAtPosition(position).equals("sem1"))
                 {
-                    Intent intent1 = new Intent(MainActivity.this, SEM_1.class);
-                    startActivity(intent1);
+                    ok.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent1 = new Intent(MainActivity.this, SEM_1.class);
+                            intent1.putExtra("name",name.getText().toString());
+                            startActivity(intent1);
+                        }
+                    });
+
 
                 }
                 if (parent.getItemAtPosition(position).equals("sem2"))
                 {
-                    Intent intent2 = new Intent(MainActivity.this, SEM_2.class);
-                    startActivity(intent2);
+                    ok.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent2 = new Intent(MainActivity.this, SEM_2.class);
+                            intent2.putExtra("name",name.getText().toString());
+                            startActivity(intent2);
+                        }
+                    });
+
 
                 }
                 if (parent.getItemAtPosition(position).equals("sem3"))
                 {
-                    Intent intent3 = new Intent(MainActivity.this, SEM_3.class);
-                    startActivity(intent3);
+                    ok.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent3 = new Intent(MainActivity.this, SEM_3.class);
+                            intent3.putExtra("name",name.getText().toString());
+                            startActivity(intent3);
+                        }
+                    });
+
 
                 }
                 if (parent.getItemAtPosition(position).equals("sem4"))
                 {
-                    Intent intent4 = new Intent(MainActivity.this, SEM_4.class);
-                    startActivity(intent4);
-
+                    ok.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent4 = new Intent(MainActivity.this, SEM_4.class);
+                            intent4.putExtra("name",name.getText().toString());
+                            startActivity(intent4);
+                        }
+                    });
                 }
 
-            }
 
+            }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

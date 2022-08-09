@@ -1,5 +1,6 @@
 package com.example.gpacalci;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -14,15 +15,26 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class SEM_3 extends AppCompatActivity {
     EditText EDT_CA, EDT_PS, EDT_DS, EDT_OOPS, EDT_SE, EDT_AI, EDT_DS_LAB, EDT_OOPS_LAB, EDT_CA_LAB;
     Dialog dialog;
-    Button confirm, home;
+    Button confirm;
+
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://gpa-calculator-80e03-default-rtdb.firebaseio.com/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState);
         setContentView(R.layout.activity_sem3);
+
+        getSupportActionBar().setTitle("SEM 3");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         EDT_CA = findViewById(R.id.CA_GRADE);
         EDT_PS = findViewById(R.id.PS_GRADE);
@@ -35,8 +47,6 @@ public class SEM_3 extends AppCompatActivity {
         EDT_CA_LAB = findViewById(R.id.CA_LAB_grade);
 
         confirm = findViewById(R.id.sem3_confirm_BTN);
-        home = findViewById(R.id.sem3_homeBTN);
-
         confirm.setEnabled(false);
 
         dialog = new Dialog(this);
@@ -72,14 +82,6 @@ public class SEM_3 extends AppCompatActivity {
             public void onClick(View v) {
 
                 dialog.show();
-            }
-        });
-
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent sem3 = new Intent(SEM_3.this, MainActivity.class);
-                startActivity(sem3);
             }
         });
     }
@@ -239,6 +241,31 @@ public class SEM_3 extends AppCompatActivity {
 
                 TextView display =  dialog.findViewById(R.id.display);
                 display.setText(Double.toString(result));
+
+                Intent intent = getIntent();
+                String name = intent.getStringExtra("name");
+
+                databaseReference.child(name).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        databaseReference.child(name).child("sem3").child("ca").setValue(Assign1);
+                        databaseReference.child(name).child("sem3").child("ps").setValue(Assign2);
+                        databaseReference.child(name).child("sem3").child("ds").setValue(Assign3);
+                        databaseReference.child(name).child("sem3").child("oop").setValue(Assign4);
+                        databaseReference.child(name).child("sem3").child("se").setValue(Assign5);
+                        databaseReference.child(name).child("sem3").child("ai").setValue(Assign6);
+
+                        databaseReference.child(name).child("sem3").child("ds_lab").setValue(Assign7);
+                        databaseReference.child(name).child("sem3").child("oop_lab").setValue(Assign8);
+                        databaseReference.child(name).child("sem3").child("ca_lab").setValue(Assign9);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
 
             }
             else

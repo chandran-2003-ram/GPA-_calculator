@@ -7,27 +7,14 @@
     tools:context=".SEM_2">
 
     <TextView
-        android:id="@+id/Sem2"
-        android:layout_width="238dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="84dp"
-        android:text="@string/sem2"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/DLD"
         android:layout_width="251dp"
         android:layout_height="48dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="129dp"
         android:layout_marginEnd="40dp"
         android:text="@string/dld"
         app:layout_constraintEnd_toStartOf="@+id/DLD_GRADE"
-        app:layout_constraintTop_toBottomOf="@+id/Sem2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/EVS"
@@ -51,7 +38,7 @@
     <TextView
         android:id="@+id/PYTHON"
         android:layout_width="251dp"
-        android:layout_height="58dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="40dp"
         android:text="@string/python"
         app:layout_constraintEnd_toStartOf="@+id/PYTHON_GRADE"
@@ -79,7 +66,6 @@
         android:id="@+id/Phy_LAB"
         android:layout_width="251dp"
         android:layout_height="58dp"
-        android:layout_marginTop="2dp"
         android:layout_marginEnd="40dp"
         android:text="@string/python_lab"
         app:layout_constraintEnd_toStartOf="@+id/PY_LAB_GRADE"
@@ -98,13 +84,13 @@
         android:id="@+id/DLD_GRADE"
         android:layout_width="71dp"
         android:layout_height="48dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="129dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
         android:maxLength="2"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sem2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/EG_LAB_GRADE"
@@ -187,21 +173,11 @@
         android:id="@+id/sem2_confirm_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="512dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="152dp"
         android:text="@string/confirm"
-        app:layout_constraintEnd_toStartOf="@+id/sem2_homeBTN"
-        app:layout_constraintTop_toBottomOf="@+id/Sem2" />
-
-    <Button
-        android:id="@+id/sem2_homeBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EG_LAB_GRADE" />
+        app:layout_constraintTop_toBottomOf="@+id/ep_lab" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

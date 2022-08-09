@@ -1,5 +1,6 @@
 package com.example.gpacalci;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -14,15 +15,26 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class SEM_1 extends AppCompatActivity {
-    EditText EDT_CHE, EDT_PHY, EDT_MAT, EDT_ENG, EDT_CLAB, EDT_CHEMLAB, EDT_PHYLAB, EDT_C, EDT_BES;
-    Button  home, confirm;
+    EditText EDT_CHE, EDT_PHY, EDT_MAT, EDT_ENG, EDT_C_LAB, EDT_CHEM_LAB, EDT_PHY_LAB, EDT_C, EDT_BES;
+    Button  confirm;
     Dialog dialog;
+
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://gpa-calculator-80e03-default-rtdb.firebaseio.com/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState);
         setContentView(R.layout.activity_sem1);
+
+        getSupportActionBar().setTitle("SEM 1");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         EDT_BES = findViewById(R.id.BES_GRADE);
         EDT_C = findViewById(R.id.C_grade);
@@ -31,13 +43,11 @@ public class SEM_1 extends AppCompatActivity {
         EDT_MAT = findViewById(R.id.mat_grade);
         EDT_ENG = findViewById(R.id.eng_grade);
 
-        EDT_CLAB = findViewById(R.id.C_lab_grade);
-        EDT_CHEMLAB = findViewById(R.id.chem_lab_grade);
-        EDT_PHYLAB = findViewById(R.id.phy_lab_grade);
+        EDT_C_LAB = findViewById(R.id.C_lab_grade);
+        EDT_CHEM_LAB = findViewById(R.id.chem_lab_grade);
+        EDT_PHY_LAB = findViewById(R.id.phy_lab_grade);
 
         confirm = findViewById(R.id.sem1_confirm_BTN);
-        home = findViewById(R.id.sem1_homeBTN);
-
         confirm.setEnabled(false);
 
         dialog = new Dialog(this);
@@ -51,20 +61,13 @@ public class SEM_1 extends AppCompatActivity {
 
         Button okay = dialog.findViewById(R.id.btn_okay);
 
-        okay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
         EDT_CHE.addTextChangedListener(textWatcher);
         EDT_PHY.addTextChangedListener(textWatcher);
         EDT_MAT.addTextChangedListener(textWatcher);
         EDT_ENG.addTextChangedListener(textWatcher);
-        EDT_CLAB.addTextChangedListener(textWatcher);
-        EDT_CHEMLAB.addTextChangedListener(textWatcher);
-        EDT_PHYLAB.addTextChangedListener(textWatcher);
+        EDT_C_LAB.addTextChangedListener(textWatcher);
+        EDT_CHEM_LAB.addTextChangedListener(textWatcher);
+        EDT_PHY_LAB.addTextChangedListener(textWatcher);
         EDT_C.addTextChangedListener(textWatcher);
         EDT_BES.addTextChangedListener(textWatcher);
 
@@ -77,12 +80,10 @@ public class SEM_1 extends AppCompatActivity {
 
             }
         });
-        home.setOnClickListener(new View.OnClickListener() {
-
+        okay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sem1 = new Intent(SEM_1.this, MainActivity.class);
-                startActivity(sem1);
+                dialog.dismiss();
             }
         });
     }
@@ -105,11 +106,11 @@ public class SEM_1 extends AppCompatActivity {
             double sub4 = 0;
             String Assign4 = EDT_ENG.getText().toString();
             double sub5 = 0;
-            String Assign5 = EDT_CLAB.getText().toString();
+            String Assign5 = EDT_C_LAB.getText().toString();
             double sub6 = 0;
-            String Assign6 = EDT_CHEMLAB.getText().toString();
+            String Assign6 = EDT_CHEM_LAB.getText().toString();
             double sub7 = 0;
-            String Assign7 = EDT_PHYLAB.getText().toString();
+            String Assign7 = EDT_PHY_LAB.getText().toString();
             double sub8 = 0;
             String Assign8 = EDT_C.getText().toString();
             double sub9 = 0;
@@ -238,24 +239,43 @@ public class SEM_1 extends AppCompatActivity {
                     sub9 = 0;
 
                 confirm.setEnabled(true);
-
                 double result = (sub1 + sub2 + sub3 + sub4 + sub5 + sub6 + sub7 + sub8 + sub9) / 9;
 
                 TextView display =  dialog.findViewById(R.id.display);
                 display.setText(Double.toString(result));
 
+                Intent intent = getIntent();
+                String name = intent.getStringExtra("name");
+
+                databaseReference.child(name).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        databaseReference.child(name).child("sem1").child("bes").setValue(Assign9);
+                        databaseReference.child(name).child("sem1").child("c").setValue(Assign8);
+                        databaseReference.child(name).child("sem1").child("chem").setValue(Assign1);
+                        databaseReference.child(name).child("sem1").child("phy").setValue(Assign2);
+                        databaseReference.child(name).child("sem1").child("mat").setValue(Assign3);
+                        databaseReference.child(name).child("sem1").child("eng").setValue(Assign4);
+
+                        databaseReference.child(name).child("sem1").child("c_lab").setValue(Assign5);
+                        databaseReference.child(name).child("sem1").child("chem_lab").setValue(Assign6);
+                        databaseReference.child(name).child("sem1").child("phy_lab").setValue(Assign7);
+
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
             }
             else
             {
                 confirm.setEnabled(false);
             }
         }
-
         @Override
         public void afterTextChanged(Editable s) {
 
         }
     };
-
-
 }

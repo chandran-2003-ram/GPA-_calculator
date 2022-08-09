@@ -54,15 +54,17 @@
         android:text="@string/C"
         app:layout_constraintEnd_toStartOf="@+id/C_grade"
         app:layout_constraintTop_toBottomOf="@+id/BES" />
+
     <TextView
         android:id="@+id/BES"
         android:layout_width="251dp"
         android:layout_height="48dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="129dp"
         android:layout_marginEnd="40dp"
         android:text="@string/bes"
         app:layout_constraintEnd_toStartOf="@+id/BES_GRADE"
-        app:layout_constraintTop_toBottomOf="@+id/sem1" />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/PHY_LAB"
         android:layout_width="251dp"
@@ -79,18 +81,6 @@
         android:text="@string/chem"
         app:layout_constraintEnd_toStartOf="@+id/che_grade"
         app:layout_constraintTop_toBottomOf="@+id/C" />
-    <TextView
-        android:id="@+id/sem1"
-        android:layout_width="238dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="84dp"
-        android:text="@string/sem1"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <EditText
@@ -98,124 +88,149 @@
         android:layout_width="71dp"
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
-        android:autofillHints="n"
         android:hint="@string/grade"
-        android:text=""
-        android:imeOptions="actionNext"
         android:imeActionLabel="Next"
+        android:imeOptions="actionNext"
+        android:text=""
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/C_grade" />
+        app:layout_constraintTop_toBottomOf="@+id/C_grade"
+        tools:ignore="DuplicateSpeakableTextCheck"
+        android:inputType="text"
+        android:autofillHints="grade"/>
+
     <EditText
         android:id="@+id/phy_grade"
+        android:inputType="text"
         android:layout_width="71dp"
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:text=""
-        android:imeOptions="actionNext"
         android:imeActionLabel="Next"
+        android:imeOptions="actionNext"
+        android:text=""
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/che_grade" />
+        app:layout_constraintTop_toBottomOf="@+id/che_grade"
+        android:autofillHints="grade" />
+
     <EditText
         android:id="@+id/mat_grade"
         android:layout_width="71dp"
+        android:inputType="text"
         android:layout_height="48dp"
+        android:autofillHints="grade"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:text=""
-        android:imeOptions="actionNext"
         android:imeActionLabel="Next"
+        android:imeOptions="actionNext"
+        android:text=""
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phy_grade" />
+
     <EditText
         android:id="@+id/eng_grade"
+        android:inputType="text"
         android:layout_width="71dp"
         android:layout_height="48dp"
+        android:autofillHints="grade"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:text=""
-        android:imeOptions="actionNext"
         android:imeActionLabel="Next"
+        android:imeOptions="actionNext"
+        android:text=""
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mat_grade" />
+
     <EditText
         android:id="@+id/C_lab_grade"
+        android:inputType="text"
         android:layout_width="71dp"
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:text=""
-        android:imeOptions="actionNext"
         android:imeActionLabel="Next"
+        android:imeOptions="actionNext"
+        android:autofillHints="grade"
+        android:text=""
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eng_grade" />
+
     <EditText
         android:id="@+id/chem_lab_grade"
+        android:inputType="text"
         android:layout_width="71dp"
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:imeOptions="actionNext"
         android:imeActionLabel="Next"
+        android:autofillHints="grade"
+        android:imeOptions="actionNext"
         android:text=""
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/C_lab_grade" />
+
     <EditText
         android:id="@+id/phy_lab_grade"
         android:layout_width="71dp"
+        android:inputType="text"
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:text=""
-        android:imeOptions="actionDone"
         android:imeActionLabel="Done"
+        android:autofillHints="grade"
+        android:imeOptions="actionDone"
+        android:text=""
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chem_lab_grade" />
+
     <EditText
         android:id="@+id/C_grade"
         android:layout_width="71dp"
+        android:inputType="text"
         android:layout_height="48dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
-        android:text=""
-        android:imeOptions="actionNext"
+        android:autofillHints="grade"
         android:imeActionLabel="Next"
+        android:imeOptions="actionNext"
+        android:text=""
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BES_GRADE" />
+
     <EditText
         android:id="@+id/BES_GRADE"
+        android:inputType="text"
         android:layout_width="71dp"
         android:layout_height="48dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="129dp"
         android:layout_marginEnd="33dp"
         android:hint="@string/grade"
+        android:autofillHints="grade"
+        android:imeActionLabel="Next"
+        android:imeOptions="actionNext"
         android:maxLength="2"
         android:text=""
-        android:imeOptions="actionNext"
-        android:imeActionLabel="Next"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sem1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-        android:id="@+id/sem1_homeBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phy_lab_grade" />
 
     <Button
         android:id="@+id/sem1_confirm_BTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="540dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="152dp"
         android:text="@string/confirm"
-        app:layout_constraintEnd_toStartOf="@+id/sem1_homeBTN"
-        app:layout_constraintTop_toBottomOf="@+id/sem1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PHY_LAB" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

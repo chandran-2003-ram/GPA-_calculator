@@ -6,11 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="181dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="112dp"
+        android:gravity="center"
+        android:hint="Enter your name:"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainspin" />
+
+    <Button
+        android:id="@+id/ok"
+        android:text="ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
     <Spinner
         android:id="@+id/mainspin"
         android:layout_width="48dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="180dp"
         android:contentDescription="@string/select"
         android:minHeight="58dp"
@@ -41,18 +63,5 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="317dp"
-        android:layout_height="172dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="44dp"
-        android:text="@string/note"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainspin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
